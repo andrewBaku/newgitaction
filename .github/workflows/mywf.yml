@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: touch file
-      - run: lname='Baku'
-      - run: fname='Andrii'
+      - run: lname="Baku"
+      - run: fname="Andrii"
       - run: echo -e 'Last name:$lname\nFirst name:$fname' > file
       - run: chmod +x ./file
       - run: bash ./file
