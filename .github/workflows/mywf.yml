@@ -14,4 +14,6 @@ jobs:
       - run: echo "🍏 This job's status is ${{ secrets.MY_SECRET_NAME }}."
       - run: echo "${GITHUB_WORKSPACE}"
       - run: echo "${GITHUB_ENV}"
-      - run: chmod +x ./scripts/bash_script.sh
+      - run: ls -a
+      - run: cd $NGA_PATH
+      - run: ls -a
