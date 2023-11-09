@@ -8,10 +8,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     env:
-      FNAME: 'Andrii'
-      LNAME: 'Baku'
+      FNAME: "Andrii"
+      LNAME: "Baku"
     steps:
       - run: touch file
       - run: echo -e 'Last name - $LNAME \n First name - $FNAME' > file
       - run: chmod +x ./file
-      - run: echo 'Last name - $LNAME. First name - $FNAME.'
+      - run: echo "Last name - $LNAME. First name - $FNAME."
