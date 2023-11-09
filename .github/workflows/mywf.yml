@@ -15,3 +15,4 @@ jobs:
       - run: echo -e "Last name - $LNAME.\nFirst name - $FNAME." > file
       - run: cat file
       - run: echo "Last name - $LNAME. First name - $FNAME."
+      - run: ls ${{ github.repository }}
