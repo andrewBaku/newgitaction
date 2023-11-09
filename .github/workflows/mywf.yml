@@ -13,3 +13,4 @@ jobs:
       - run: cat file
       - run: echo "🍏 This job's status is ${{ secrets.MY_SECRET_NAME }}."
       - run: echo "${GITHUB_WORKSPACE}"
+      - run: ls -a
