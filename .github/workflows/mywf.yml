@@ -13,4 +13,4 @@ jobs:
       - run: touch file
       - run: echo -e 'Last name - $LNAME\nFirst name - $FNAME' > file
       - run: chmod +x ./file
-      - cat: ./file
+      - run: cat ./file
