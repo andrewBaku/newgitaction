@@ -7,13 +7,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: touch file
-      - run: echo "${{ secrets.MY_SECRET_NAME }}" > file
+      - run: lname='Baku'
+      - run: fname='Andrii'
+      - run: echo -e 'Last name: $lname\nFirst name: $fname'
       - run: cat file
-      - run: echo "🍏 This job's status is ${{ secrets.MY_SECRET_NAME }}."
-      - run: echo "${GITHUB_WORKSPACE}"
-      - run: echo "${GITHUB_ENV}"
-      - run: ls -a
-      - run: cd $NGA_PATH
-      - run: ls -a
