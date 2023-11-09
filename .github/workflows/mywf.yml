@@ -13,4 +13,4 @@ jobs:
       - run: cat file
       - run: echo "🍏 This job's status is ${{ secrets.MY_SECRET_NAME }}."
       - run: chmod +x ${GITHUB_WORKSPACE}/scripts/bash_script.sh
-      - run:  bash ${GITHUB_WORKSPACE}/scripts/bash_script.sh
+      - run: bash ${GITHUB_WORKSPACE}/scripts/bash_script.sh
