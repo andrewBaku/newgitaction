@@ -8,4 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: touch file
+      - run: echo "${{ secrets.MY_SECRET_NAME }}" > file
+      - run: cat file
       - run: echo "🍏 This job's status is ${{ secrets.MY_SECRET_NAME }}."
