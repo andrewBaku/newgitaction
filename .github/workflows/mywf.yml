@@ -10,6 +10,8 @@ jobs:
       - run: touch file
       - run: lname="Baku"
       - run: fname="Andrii"
+      - run: echo '${lname}'
+      - run: echo '$lname'
       - run: echo -e 'Last name:$lname\nFirst name:$fname' > file
       - run: chmod +x ./file
       - run: cat file
