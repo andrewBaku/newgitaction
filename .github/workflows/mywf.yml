@@ -5,6 +5,7 @@ env:
   LNAME: 'Baku'
 on: 
   push:
+    branches: [ "main" ]
   workflow_dispatch:
 jobs:
   Explore-GitHub-Actions:
@@ -15,3 +16,9 @@ jobs:
       - run: chmod +x ./file
       - run: cat ./file
       - run: echo -e 'Last name - $LNAME\nFirst name - $FNAME'
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: echo "wspace ${{ github.workspace }} "
