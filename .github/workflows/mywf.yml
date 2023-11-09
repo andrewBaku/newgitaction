@@ -10,5 +10,5 @@ jobs:
       - run: touch file
       - run: lname='Baku'
       - run: fname='Andrii'
-      - run: echo -e 'Last name: $lname\nFirst name: $fname'
+      - run: echo -e 'Last name:$lname\nFirst name:$fname' > file
       - run: cat file
