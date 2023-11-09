@@ -1,5 +1,8 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+env:
+  FNAME: 'Andrii'
+  LNAME: 'Baku'
 on: 
   push:
   workflow_dispatch:
@@ -8,10 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: touch file
-      - run: lname="Baku"
-      - run: fname="Andrii"
-      - run: echo '${lname}'
-      - run: echo '$lname'
-      - run: echo -e 'Last name:$lname\nFirst name:$fname' > file
+      - run: echo -e 'Last name - $LNAME\nFirst name - $FNAME' > file
       - run: chmod +x ./file
-      - run: cat file
+      - run: echo file
