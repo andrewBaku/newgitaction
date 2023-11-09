@@ -1,3 +1,3 @@
 # newgitaction
 
-![](https://github.com/<Github username>/<repo name>/actions/workflows/<workflow name>/badge.svg)
+![](https://github.com/andrewBaku/newgitaction/actions/workflows/mywf.yml/badge.svg)
