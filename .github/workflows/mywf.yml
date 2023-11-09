@@ -6,13 +6,11 @@ on:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: /scripts/
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: touch file
       - run: echo "${{ secrets.MY_SECRET_NAME }}" > file
       - run: cat file
       - run: echo "🍏 This job's status is ${{ secrets.MY_SECRET_NAME }}."
-      - run: ./bash_script.sh
+      - run: chmod +x ${GITHUB_WORKSPACE}/scripts/bash_script.sh
+      - run:  bash ${GITHUB_WORKSPACE}/scripts/bash_script.sh
