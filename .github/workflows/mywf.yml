@@ -1,8 +1,5 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-env:
-  FNAME: 'Andrii'
-  LNAME: 'Baku'
 on: 
   push:
     branches: [ "main" ]
@@ -10,15 +7,12 @@ on:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    env:
+      FNAME: 'Andrii'
+      LNAME: 'Baku'
     steps:
       - run: touch file
-      - run: echo -e 'Last name - $LNAME\nFirst name - $FNAME' > file
+      - run: echo -e 'Last name - $LNAME \n First name - $FNAME' > file
       - run: chmod +x ./file
       - run: cat ./file
       - run: echo -e 'Last name - $LNAME\nFirst name - $FNAME'
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: echo "wspace ${{ github.workspace }} "
