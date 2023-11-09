@@ -16,4 +16,4 @@ jobs:
       - run: cat file
       - run: echo "Last name - $LNAME. First name - $FNAME."
       - run: |
-          ls ${{ github.workspace }}
+          ls ${{ github.repository }}
