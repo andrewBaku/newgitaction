@@ -12,6 +12,6 @@ jobs:
       LNAME: "Baku"
     steps:
       - run: touch file
-      - run: echo -e 'Last name - $LNAME \n First name - $FNAME' > file
-      - run: chmod +x ./file
+      - run: echo -e "Last name - $LNAME.\nFirst name - $FNAME." > file
+      - run: cat file
       - run: echo "Last name - $LNAME. First name - $FNAME."
